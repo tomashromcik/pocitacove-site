@@ -5,6 +5,105 @@
   <title>Co je počítačová síť</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Doplňkový styl pro piktogramy a zvětšování obrázků -->
+  <style>
+    .badge-row {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge-ico {
+      font-size: 1rem;
+    }
+    .badge-basic {
+      background: #e3f2fd;
+      color: #0d47a1;
+    }
+    .badge-fun {
+      background: #fff3e0;
+      color: #e65100;
+    }
+    .badge-extra {
+      background: #ede7f6;
+      color: #4a148c;
+    }
+
+    .icon-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .icon-label span:first-child {
+      font-size: 1.1rem;
+    }
+
+    .content-card.extra {
+      border-left: 4px solid #4a148c;
+    }
+    .content-card.fun {
+      border-left: 4px solid #e65100;
+    }
+
+    .zoomable {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .zoomable:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .img-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .img-modal.open {
+      display: flex;
+    }
+    .img-modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+    .img-modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 2.2rem;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .img-modal-close:hover {
+      opacity: 0.8;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-top: 0.35rem;
+    }
+  </style>
 </head>
 <body>
   <main class="layout">
@@ -20,55 +119,222 @@
       <div class="content-label">Kapitola 1</div>
       <h1 class="content-title">Co je počítačová síť</h1>
 
+      <!-- Vysvětlivky k ikonám -->
+      <div class="badge-row">
+        <div class="badge badge-basic">
+          <span class="badge-ico">📘</span>
+          <span>Základní text</span>
+        </div>
+        <div class="badge badge-fun">
+          <span class="badge-ico">💡</span>
+          <span>Zajímavost</span>
+        </div>
+        <div class="badge badge-extra">
+          <span class="badge-ico">⭐</span>
+          <span>Rozšiřující učivo</span>
+        </div>
+      </div>
+
       <div class="content-grid">
+        <!-- LEVÝ SLOUPEC – hlavní výklad -->
         <div class="content-body">
           <p>
-            Počítačová síť je skupina zařízení, která jsou navzájem propojena tak, aby si mohla vyměňovat data.
-            Do sítě nepatří jen počítače, ale také mobilní telefony, tablety, chytré televize, tiskárny
-            a další zařízení.
+            <strong>Počítačová síť</strong> je skupina zařízení, která jsou propojena tak, aby si mohla
+            navzájem vyměňovat data. Do sítě patří nejen stolní počítače a notebooky, ale také mobilní telefony,
+            tablety, chytré televize, tiskárny, herní konzole, chytré hodinky nebo třeba školní server.
           </p>
           <p>
-            Díky síti můžeme posílat zprávy, sdílet soubory, tisknout na společné tiskárně, hrát hry s ostatními
-            hráči nebo přistupovat k internetu. Síť zjednodušuje komunikaci i spolupráci mezi lidmi.
+            Díky počítačovým sítím můžeme sdílet soubory, tisknout na společné tiskárně, pracovat na jednom dokumentu
+            z různých míst, hrát online hry nebo používat internet. Síť tedy usnadňuje komunikaci i spolupráci mezi lidmi.
           </p>
 
           <div class="content-card">
-            <h3>Přirovnání: síť jako doprava</h3>
+            <div class="icon-label">
+              <span>📘</span><span><strong>Základní: síť jako dopravní systém</strong></span>
+            </div>
+            <p>
+              Počítačovou síť si můžeme představit jako <strong>dopravní systém</strong>:
+            </p>
             <ul>
-              <li><strong>Zařízení v síti</strong> jsou jako města na mapě.</li>
-              <li><strong>Kabely a bezdrátové spojení</strong> jsou jako silnice a dálnice.</li>
-              <li><strong>Data</strong> jsou jako balíčky, které putují mezi městy.</li>
-              <li><strong>Pravidla komunikace</strong> (protokoly) jsou jako dopravní předpisy.</li>
+              <li><strong>Zařízení v síti</strong> (počítače, telefony, servery) jsou jako <strong>města</strong>.</li>
+              <li><strong>Kabely a bezdrátové spojení</strong> jsou jako <strong>silnice, dálnice a mosty</strong>.</li>
+              <li>
+                <strong>Data</strong> jsou jako <strong>balíčky naložené na autech a náklaďácích</strong>, které jezdí
+                po sítí silnic mezi jednotlivými městy.
+              </li>
+              <li>
+                <strong>Rychlost připojení</strong> připomíná <strong>počet pruhů</strong> na dálnici – čím širší dálnice,
+                tím více aut (dat) může jet najednou.
+              </li>
+              <li>
+                <strong>Přetížená síť</strong> je jako <strong>dopravní zácpa</strong> – cestu dokončíme, ale trvá to déle.
+              </li>
+              <li>
+                <strong>Pravidla komunikace (protokoly)</strong> jsou jako <strong>dopravní předpisy</strong> –
+                určují, kudy mohou „datová auta“ jezdit a jak se mají chovat, aby do sebe nenarážela.
+              </li>
             </ul>
           </div>
 
-          <p>
-            Aby si zařízení rozuměla, používají společná pravidla nazývaná <strong>komunikační protokoly</strong>.
-            Ty určují, jak mají být data zabalena, odeslána, přijata a zkontrolována.
-          </p>
+          <div class="content-card">
+            <div class="icon-label">
+              <span>📘</span><span><strong>Základní: co všechno děláme v síti a na internetu</strong></span>
+            </div>
+            <p>
+              Samotná počítačová síť je jen cesta. Abychom ji uměli využít, používáme na ní různé
+              <strong>služby internetu</strong>. Mezi nejčastější patří:
+            </p>
+            <ul>
+              <li><strong>World Wide Web (WWW)</strong> – prohlížení webových stránek v prohlížeči.</li>
+              <li><strong>E-mail</strong> – elektronická pošta (např. školní e-maily).</li>
+              <li><strong>DNS</strong> – služba, která převádí názvy webů (např. <code>seznam.cz</code>) na číselné adresy.</li>
+              <li><strong>Cloudové služby</strong> (Google Drive, OneDrive…) – ukládání souborů na internetu.</li>
+              <li><strong>Instant messaging</strong> (Messenger, WhatsApp…) – rychlé zprávy, chaty a skupiny.</li>
+              <li><strong>VoIP</strong> (např. Skype) – telefonování a videohovory přes internet.</li>
+              <li><strong>Streaming</strong> – sledování videí (YouTube, Netflix) nebo poslech hudby (Spotify) online.</li>
+              <li><strong>Online hry</strong> – sdílený herní svět, kde spolu komunikují herní servery a klienti.</li>
+              <li><strong>Přenos souborů</strong> (např. FTP) – nahrávání a stahování dat na servery.</li>
+            </ul>
+            <p>
+              Všechno, co na internetu děláme, běží nad nějakou službou, která využívá počítačovou síť
+              a její pravidla komunikace.
+            </p>
+          </div>
+
+          <div class="content-card">
+            <div class="icon-label">
+              <span>📘</span><span><strong>Základní: komunikační protokoly</strong></span>
+            </div>
+            <p>
+              Aby si zařízení v síti <strong>rozuměla</strong>, musí dodržovat stejná pravidla. Těmto pravidlům říkáme
+              <strong>komunikační protokoly</strong>.
+            </p>
+            <p>Protokoly určují například:</p>
+            <ul>
+              <li>jak se data rozdělí na menší <strong>balíčky</strong> (pakety),</li>
+              <li>jak jsou jednotlivé balíčky „zabalené“ (co je adresa odesílatele a příjemce),</li>
+              <li>jak se balíčky odesílají a přijímají,</li>
+              <li>jak zjistit, že se balíček po cestě neztratil nebo nepoškodil,</li>
+              <li>co dělat, když se balíček ztratí – například jej znovu poslat.</li>
+            </ul>
+            <p>
+              Mezi nejznámější protokoly patří například <strong>TCP/IP</strong> (základ internetu),
+              <strong>HTTP/HTTPS</strong> (webové stránky), <strong>SMTP</strong> (e-mail) nebo <strong>DNS</strong> (překlad názvů).
+            </p>
+          </div>
+
+          <div class="content-card extra">
+            <div class="icon-label">
+              <span>⭐</span><span><strong>Rozšiřující učivo: referenční model ISO/OSI</strong></span>
+            </div>
+            <p>
+              V informatice se často používá <strong>referenční model ISO/OSI</strong>, který rozděluje komunikaci
+              v síti do <strong>sedmi vrstev</strong>. Každá vrstva má svůj úkol – podobně jako když v dopravě řešíme
+              zvlášť značky, cesty, vozidla, řízení provozu atd.
+            </p>
+            <p>
+              Jednoduché schéma ISO/OSI modelu najdeš například zde:
+              <a href="https://upload.wikimedia.org/wikipedia/commons/5/5a/OSI_Model_v1.svg" target="_blank" rel="noopener">
+                obrázek modelu ISO/OSI (Wikimedia)
+              </a>.
+            </p>
+            <p class="note">
+              Tato část je <strong>rozšiřující</strong> – vhodná pro zvídavé žáky nebo jako podklad pro další výklad.
+            </p>
+          </div>
         </div>
 
+        <!-- PRAVÝ SLOUPEC – příklady, zajímavosti, obrázky -->
         <div>
           <div class="content-card">
-            <h3>Co všechno v síti běžně děláme</h3>
+            <div class="icon-label">
+              <span>📘</span><span><strong>Co v síti běžně děláme</strong></span>
+            </div>
             <ul>
-              <li>posíláme e-maily a zprávy v chatu,</li>
-              <li>přihlašujeme se do školního systému,</li>
+              <li>přihlašujeme se do školního systému a k digitálním učebnicím,</li>
+              <li>posíláme si e-maily a zprávy v chatu,</li>
               <li>vyhledáváme informace na webu,</li>
               <li>díváme se na videa a posloucháme hudbu online,</li>
-              <li>sdílíme dokumenty a prezentace s ostatními.</li>
+              <li>sdílíme dokumenty a prezentace s ostatními,</li>
+              <li>hrajeme online hry s kamarády.</li>
             </ul>
+          </div>
+
+          <div class="content-card fun">
+            <div class="icon-label">
+              <span>💡</span><span><strong>Zajímavost: jak rychle cestují data?</strong></span>
+            </div>
+            <p>
+              Data v optickém kabelu se šíří rychlostí blízkou <strong>rychlosti světla</strong>. To znamená, že zpráva
+              může „oběhnout půl světa“ za zlomek sekundy. Přesto někdy vnímáme zpoždění
+              – to je způsobené přetížením sítě, pomalejším zařízením nebo zpracováním dat na serverech.
+            </p>
           </div>
 
           <div class="img-box">
-            <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Zařízení připojená do sítě">
+            <img
+              class="zoomable"
+              src="https://www.pngegg.com/pngimages/918/215/png-clipart-network-illustration-computer-network-computer-icons-local-area-network-computer-servers-computer-network-electronics-computer-thumbnail.png"
+              data-full="https://www.pngegg.com/pngimages/918/215/png-clipart-network-illustration-computer-network-computer-icons-local-area-network-computer-servers-computer-network-electronics-computer-thumbnail.png"
+              alt="Schéma počítačové sítě – propojená zařízení"
+            >
             <div class="img-caption">
-              Různá zařízení (notebook, mobil, tablet) mohou být součástí jedné společné sítě.
+              Schéma propojených zařízení v počítačové síti. Kliknutím na obrázek jej zvětšíš.
             </div>
+          </div>
+
+          <div class="content-card extra">
+            <div class="icon-label">
+              <span>⭐</span><span><strong>Rozšiřující: vrstvy komunikace</strong></span>
+            </div>
+            <p>
+              V praxi se často setkáš s pojmem <strong>vrstva</strong> – například „aplikační vrstva“ nebo „síťová vrstva“.
+              Znamená to, že komunikace je rozdělena na menší kroky, které na sebe navazují. Každý krok řeší něco jiného
+              (adresu, cestu, obsah zprávy…) a dohromady umožňují, aby se data z jednoho zařízení spolehlivě dostala do druhého.
+            </p>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Modal pro zvětšování obrázků -->
+  <div class="img-modal" id="img-modal">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img id="img-modal-img" src="" alt="Zvětšený obrázek">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      document.querySelectorAll('.zoomable').forEach(function (img) {
+        img.addEventListener('click', function () {
+          const fullSrc = img.dataset.full || img.src;
+          modalImg.src = fullSrc;
+          modal.classList.add('open');
+        });
+      });
+
+      function closeModal(e) {
+        if (e.target === modal || e.target === closeBtn) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      }
+
+      modal.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
