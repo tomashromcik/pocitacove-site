@@ -158,53 +158,112 @@
             </div>
           </div>
 
-          <!-- ZAJÍMAVOSTI -->
-          <h2 class="topic-section-title">💡 Zajímavosti</h2>
+         <!-- ZAJÍMAVOSTI – nyní také jako akordeony -->
+<h2 class="topic-section-title">💡 Zajímavosti</h2>
 
-          <div class="content-card fun">
-            <div class="icon-label">
-              <span>💡</span><span><strong>Jak rychle cestují data?</strong></span>
-            </div>
-            <p>
-              Data v optickém kabelu se šíří rychlostí blízkou <strong>rychlosti světla</strong>. To znamená, že zpráva
-              může „oběhnout půl světa“ za zlomek sekundy. Přesto někdy vnímáme zpoždění
-              – to je způsobené přetížením sítě, pomalejším zařízením nebo zpracováním dat na serverech.
-            </p>
-          </div>
+<div class="content-card fun">
 
-          <!-- ROZŠIŘUJÍCÍ UČIVO -->
-          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+  <!-- Téma: rychlost dat v optickém kabelu -->
+  <button class="topic-toggle" data-target="topic-opticky-kabel">
+    <span class="topic-label">
+      <span class="topic-icon">💡</span>
+      <span>Jak rychle cestují data v optickém kabelu?</span>
+    </span>
+    <span class="topic-arrow">▾</span>
+  </button>
 
-          <div class="content-card extra">
-            <div class="icon-label">
-              <span>⭐</span><span><strong>Referenční model ISO/OSI</strong></span>
-            </div>
-            <p>
-              V informatice se často používá <strong>referenční model ISO/OSI</strong>, který rozděluje komunikaci
-              v síti do <strong>sedmi vrstev</strong>. Každá vrstva má svůj úkol – podobně jako když v dopravě řešíme
-              zvlášť značky, cesty, vozidla, řízení provozu atd.
-            </p>
-            <p>
-              Základní informace a schémata najdeš například zde:
-              <a href="https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI" target="_blank" rel="noopener">
-                článek o modelu ISO/OSI na Wikipedii
-              </a>.
-            </p>
-            <p class="note">
-              Tato část je <strong>rozšiřující</strong> – vhodná pro zvídavé žáky nebo jako podklad pro další výklad.
-            </p>
-          </div>
+  <div id="topic-opticky-kabel" class="topic-panel">
+    <p>
+      Data v optickém kabelu se šíří pomocí světla a jejich rychlost je velmi blízká
+      <strong>rychlosti světla</strong>. Díky tomu mohou informace cestovat na obrovské vzdálenosti za zlomky sekund.
+    </p>
 
-          <div class="content-card extra">
-            <div class="icon-label">
-              <span>⭐</span><span><strong>Vrstvy komunikace</strong></span>
-            </div>
-            <p>
-              V praxi se často setkáš s pojmem <strong>vrstva</strong> – například „aplikační vrstva“ nebo „síťová vrstva“.
-              Znamená to, že komunikace je rozdělena na menší kroky, které na sebe navazují. Každý krok řeší něco jiného
-              (adresu, cestu, obsah zprávy…) a dohromady umožňují, aby se data z jednoho zařízení spolehlivě dostala do druhého.
-            </p>
-          </div>
+    <div class="img-box">
+      <img
+        class="zoomable"
+        src="https://www.poda.cz/wp-content/uploads/2023/10/Opticky-kabel-struktura.png"
+        data-full="https://www.poda.cz/wp-content/uploads/2023/10/Opticky-kabel-struktura.png"
+        alt="Struktura optického kabelu"
+      >
+      <div class="img-caption">
+        Struktura optického kabelu – světlo se šíří tenkým vláknem uvnitř kabelu.
+      </div>
+    </div>
+
+    <p>
+      Pokud ale vnímáme zpoždění (tzv. lag), bývá to způsobeno hlavně <strong>přetížením sítě</strong>,
+      <strong>pomalejším zařízením</strong> nebo zpracováním dat na vzdáleném serveru.
+    </p>
+  </div>
+
+</div>
+
+<!-- ROZŠIŘUJÍCÍ UČIVO – nyní také akordeony -->
+<h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+<div class="content-card extra">
+
+  <!-- Téma: ISO/OSI model -->
+  <button class="topic-toggle" data-target="topic-osi-model">
+    <span class="topic-label">
+      <span class="topic-icon">⭐</span>
+      <span>Referenční model ISO/OSI</span>
+    </span>
+    <span class="topic-arrow">▾</span>
+  </button>
+
+  <div id="topic-osi-model" class="topic-panel">
+    <p>
+      <strong>Referenční model ISO/OSI</strong> popisuje komunikaci v síti jako
+      sedm na sebe navazujících vrstev. Je to způsob, jak pochopit, co se děje
+      „v zákulisí“, když posíláme data od jednoho zařízení ke druhému.
+    </p>
+
+    <p>
+      Schémata a podrobnější informace najdeš zde:<br>
+      <a href="https://cs.wikipedia.org/wiki/Referenční_model_ISO/OSI"
+         target="_blank" rel="noopener">
+        článek o modelu ISO/OSI na Wikipedii
+      </a>
+    </p>
+
+    <p class="note">
+      Tato část je určena žákům, kteří chtějí tématu porozumět více do hloubky.
+    </p>
+  </div>
+
+
+  <!-- Téma: Vrstvy komunikace -->
+  <button class="topic-toggle" data-target="topic-vrstvy">
+    <span class="topic-label">
+      <span class="topic-icon">⭐</span>
+      <span>Vrstvy komunikace</span>
+    </span>
+    <span class="topic-arrow">▾</span>
+  </button>
+
+  <div id="topic-vrstvy" class="topic-panel">
+    <p>
+      Komunikace v síti je rozdělena na jednotlivé kroky – tzv. <strong>vrstvy</strong>.
+      Každá z nich řeší jiný problém:
+    </p>
+
+    <ul>
+      <li>jak najít cestu k cíli,</li>
+      <li>jak zajistit, že se data neztratí,</li>
+      <li>jak správně doručit obsah aplikaci,</li>
+      <li>jak interpretovat samotná data.</li>
+    </ul>
+
+    <p>
+      Vrstvový přístup umožňuje, aby různé technologie spolupracovaly – každá vrstva má svůj úkol
+      a dohromady tvoří celek, který umožňuje spolehlivý přenos informací.
+    </p>
+  </div>
+
+</div>
+
+        
 
         </div>
       </div>
