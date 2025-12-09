@@ -20,7 +20,7 @@
       <div class="content-label">Kapitola 1</div>
       <h1 class="content-title">Co je počítačová síť</h1>
 
-      <!-- Vysvětlivky k ikonám -->
+      <!-- Legenda k ikonám -->
       <div class="badge-row">
         <div class="badge badge-basic">
           <span class="badge-ico">📘</span>
@@ -37,8 +37,10 @@
       </div>
 
       <div class="content-grid">
-        <!-- LEVÝ SLOUPEC – hlavní výklad -->
+        <!-- Všechen obsah v jednom hlavním sloupci -->
         <div class="content-body">
+
+          <!-- Úvodní text + obrázek -->
           <p>
             <strong>Počítačová síť</strong> je skupina zařízení, která jsou propojena tak, aby si mohla
             navzájem vyměňovat data. Do sítě patří nejen stolní počítače a notebooky, ale také mobilní telefony,
@@ -49,121 +51,119 @@
             z různých míst, hrát online hry nebo používat internet. Síť tedy usnadňuje komunikaci i spolupráci mezi lidmi.
           </p>
 
-          <div class="content-card">
-            <div class="icon-label">
-              <span>📘</span><span><strong>Základní: síť jako dopravní systém</strong></span>
+          <div class="img-box">
+            <img
+              class="zoomable"
+              src="img/pc-sit-schema.png"
+              data-full="img/pc-sit-schema.png"
+              alt="Schéma počítačové sítě – propojená zařízení"
+            >
+            <div class="img-caption">
+              Schéma propojených zařízení v počítačové síti. Kliknutím na obrázek jej zvětšíš.
             </div>
-            <p>
-              Počítačovou síť si můžeme představit jako <strong>dopravní systém</strong>:
-            </p>
-            <ul>
-              <li><strong>Zařízení v síti</strong> (počítače, telefony, servery) jsou jako <strong>města</strong>.</li>
-              <li><strong>Kabely a bezdrátové spojení</strong> jsou jako <strong>silnice, dálnice a mosty</strong>.</li>
-              <li>
-                <strong>Data</strong> jsou jako <strong>balíčky naložené na autech a náklaďácích</strong>, které jezdí
-                po sítí silnic mezi jednotlivými městy.
-              </li>
-              <li>
-                <strong>Rychlost připojení</strong> připomíná <strong>počet pruhů</strong> na dálnici – čím širší dálnice,
-                tím více aut (dat) může jet najednou.
-              </li>
-              <li>
-                <strong>Přetížená síť</strong> je jako <strong>dopravní zácpa</strong> – cestu dokončíme, ale trvá to déle.
-              </li>
-              <li>
-                <strong>Pravidla komunikace (protokoly)</strong> jsou jako <strong>dopravní předpisy</strong> –
-                určují, kudy mohou „datová auta“ jezdit a jak se mají chovat, aby do sebe nenarážela.
-              </li>
-            </ul>
           </div>
 
-          <div class="content-card">
-            <div class="icon-label">
-              <span>📘</span><span><strong>Základní: co všechno děláme v síti a na internetu</strong></span>
-            </div>
-            <p>
-              Samotná počítačová síť je jen cesta. Abychom ji uměli využít, používáme na ní různé
-              <strong>služby internetu</strong>. Mezi nejčastější patří:
-            </p>
-            <ul>
-              <li><strong>World Wide Web (WWW)</strong> – prohlížení webových stránek v prohlížeči.</li>
-              <li><strong>E-mail</strong> – elektronická pošta (např. školní e-maily).</li>
-              <li><strong>DNS</strong> – služba, která převádí názvy webů (např. <code>seznam.cz</code>) na číselné adresy.</li>
-              <li><strong>Cloudové služby</strong> (Google Drive, OneDrive…) – ukládání souborů na internetu.</li>
-              <li><strong>Instant messaging</strong> (Messenger, WhatsApp…) – rychlé zprávy, chaty a skupiny.</li>
-              <li><strong>VoIP</strong> (např. Skype) – telefonování a videohovory přes internet.</li>
-              <li><strong>Streaming</strong> – sledování videí (YouTube, Netflix) nebo poslech hudby (Spotify) online.</li>
-              <li><strong>Online hry</strong> – sdílený herní svět, kde spolu komunikují herní servery a klienti.</li>
-              <li><strong>Přenos souborů</strong> (např. FTP) – nahrávání a stahování dat na servery.</li>
-            </ul>
-            <p>
-              Všechno, co na internetu děláme, běží nad nějakou službou, která využívá počítačovou síť
-              a její pravidla komunikace.
-            </p>
-          </div>
+          <!-- ZÁKLADNÍ TEXT – témata jako rozbalovací tlačítka -->
+          <h2 class="topic-section-title">📘 Základní text</h2>
 
           <div class="content-card">
-            <div class="icon-label">
-              <span>📘</span><span><strong>Základní: komunikační protokoly</strong></span>
+            <!-- Téma: síť jako dopravní systém -->
+            <button class="topic-toggle" data-target="topic-doprava">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Počítačová síť jako dopravní systém</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-doprava" class="topic-panel">
+              <p>
+                Počítačovou síť si můžeme představit jako <strong>dopravní systém</strong>:
+              </p>
+              <ul>
+                <li><strong>Zařízení v síti</strong> (počítače, telefony, servery) jsou jako <strong>města</strong>.</li>
+                <li><strong>Kabely a bezdrátové spojení</strong> jsou jako <strong>silnice, dálnice a mosty</strong>.</li>
+                <li>
+                  <strong>Data</strong> jsou jako <strong>balíčky naložené na autech a náklaďácích</strong>, které jezdí
+                  po síti silnic mezi jednotlivými městy.
+                </li>
+                <li>
+                  <strong>Rychlost připojení</strong> připomíná <strong>počet pruhů</strong> na dálnici – čím širší dálnice,
+                  tím více aut (dat) může jet najednou.
+                </li>
+                <li>
+                  <strong>Přetížená síť</strong> je jako <strong>dopravní zácpa</strong> – cestu dokončíme, ale trvá to déle.
+                </li>
+                <li>
+                  <strong>Pravidla komunikace (protokoly)</strong> jsou jako <strong>dopravní předpisy</strong> –
+                  určují, kudy mohou „datová auta“ jezdit a jak se mají chovat, aby do sebe nenarážela.
+                </li>
+              </ul>
             </div>
-            <p>
-              Aby si zařízení v síti <strong>rozuměla</strong>, musí dodržovat stejná pravidla. Těmto pravidlům říkáme
-              <strong>komunikační protokoly</strong>.
-            </p>
-            <p>Protokoly určují například:</p>
-            <ul>
-              <li>jak se data rozdělí na menší <strong>balíčky</strong> (pakety),</li>
-              <li>jak jsou jednotlivé balíčky „zabalené“ (co je adresa odesílatele a příjemce),</li>
-              <li>jak se balíčky odesílají a přijímají,</li>
-              <li>jak zjistit, že se balíček po cestě neztratil nebo nepoškodil,</li>
-              <li>co dělat, když se balíček ztratí – například jej znovu poslat.</li>
-            </ul>
-            <p>
-              Mezi nejznámější protokoly patří například <strong>TCP/IP</strong> (základ internetu),
-              <strong>HTTP/HTTPS</strong> (webové stránky), <strong>SMTP</strong> (e-mail) nebo <strong>DNS</strong> (překlad názvů).
-            </p>
+
+            <!-- Téma: služby internetu -->
+            <button class="topic-toggle" data-target="topic-sluzby">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Co všechno děláme v síti a na internetu</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-sluzby" class="topic-panel">
+              <p>
+                Samotná počítačová síť je jen cesta. Abychom ji uměli využít, používáme na ní různé
+                <strong>služby internetu</strong>. Mezi nejčastější patří:
+              </p>
+              <ul>
+                <li><strong>World Wide Web (WWW)</strong> – prohlížení webových stránek v prohlížeči.</li>
+                <li><strong>E-mail</strong> – elektronická pošta (např. školní e-maily).</li>
+                <li><strong>DNS</strong> – služba, která převádí názvy webů (např. <code>seznam.cz</code>) na číselné adresy.</li>
+                <li><strong>Cloudové služby</strong> (Google Drive, OneDrive…) – ukládání souborů na internetu.</li>
+                <li><strong>Instant messaging</strong> (Messenger, WhatsApp…) – rychlé zprávy, chaty a skupiny.</li>
+                <li><strong>VoIP</strong> (např. Skype) – telefonování a videohovory přes internet.</li>
+                <li><strong>Streaming</strong> – sledování videí (YouTube, Netflix) nebo poslech hudby (Spotify) online.</li>
+                <li><strong>Online hry</strong> – sdílený herní svět, kde spolu komunikují herní servery a klienti.</li>
+                <li><strong>Přenos souborů</strong> (např. FTP) – nahrávání a stahování dat na servery.</li>
+              </ul>
+              <p>
+                Všechno, co na internetu děláme, běží nad nějakou službou, která využívá počítačovou síť
+                a její pravidla komunikace.
+              </p>
+            </div>
+
+            <!-- Téma: komunikační protokoly -->
+            <button class="topic-toggle" data-target="topic-protokoly">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Komunikační protokoly</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-protokoly" class="topic-panel">
+              <p>
+                Aby si zařízení v síti <strong>rozuměla</strong>, musí dodržovat stejná pravidla. Těmto pravidlům říkáme
+                <strong>komunikační protokoly</strong>.
+              </p>
+              <p>Protokoly určují například:</p>
+              <ul>
+                <li>jak se data rozdělí na menší <strong>balíčky</strong> (pakety),</li>
+                <li>jak jsou jednotlivé balíčky „zabalené“ (co je adresa odesílatele a příjemce),</li>
+                <li>jak se balíčky odesílají a přijímají,</li>
+                <li>jak zjistit, že se balíček po cestě neztratil nebo nepoškodil,</li>
+                <li>co dělat, když se balíček ztratí – například jej znovu poslat.</li>
+              </ul>
+              <p>
+                Mezi nejznámější protokoly patří například <strong>TCP/IP</strong> (základ internetu),
+                <strong>HTTP/HTTPS</strong> (webové stránky), <strong>SMTP</strong> (e-mail) nebo <strong>DNS</strong> (překlad názvů).
+              </p>
+            </div>
           </div>
 
-          <div class="content-card extra">
-            <div class="icon-label">
-              <span>⭐</span><span><strong>Rozšiřující učivo: referenční model ISO/OSI</strong></span>
-            </div>
-            <p>
-              V informatice se často používá <strong>referenční model ISO/OSI</strong>, který rozděluje komunikaci
-              v síti do <strong>sedmi vrstev</strong>. Každá vrstva má svůj úkol – podobně jako když v dopravě řešíme
-              zvlášť značky, cesty, vozidla, řízení provozu atd.
-            </p>
-            <p>
-              Jednoduché schéma ISO/OSI modelu najdeš například zde:
-              <a href="https://upload.wikimedia.org/wikipedia/commons/5/5a/OSI_Model_v1.svg" target="_blank" rel="noopener">
-                obrázek modelu ISO/OSI (Wikimedia)
-              </a>.
-            </p>
-            <p class="note">
-              Tato část je <strong>rozšiřující</strong> – vhodná pro zvídavé žáky nebo jako podklad pro další výklad.
-            </p>
-          </div>
-        </div>
-
-        <!-- PRAVÝ SLOUPEC – příklady, zajímavosti, obrázky -->
-        <div>
-          <div class="content-card">
-            <div class="icon-label">
-              <span>📘</span><span><strong>Co v síti běžně děláme</strong></span>
-            </div>
-            <ul>
-              <li>přihlašujeme se do školního systému a k digitálním učebnicím,</li>
-              <li>posíláme si e-maily a zprávy v chatu,</li>
-              <li>vyhledáváme informace na webu,</li>
-              <li>díváme se na videa a posloucháme hudbu online,</li>
-              <li>sdílíme dokumenty a prezentace s ostatními,</li>
-              <li>hrajeme online hry s kamarády.</li>
-            </ul>
-          </div>
+          <!-- ZAJÍMAVOSTI -->
+          <h2 class="topic-section-title">💡 Zajímavosti</h2>
 
           <div class="content-card fun">
             <div class="icon-label">
-              <span>💡</span><span><strong>Zajímavost: jak rychle cestují data?</strong></span>
+              <span>💡</span><span><strong>Jak rychle cestují data?</strong></span>
             </div>
             <p>
               Data v optickém kabelu se šíří rychlostí blízkou <strong>rychlosti světla</strong>. To znamená, že zpráva
@@ -172,21 +172,32 @@
             </p>
           </div>
 
-          <div class="img-box">
-            <img
-              class="zoomable"
-              src="https://www.pngegg.com/pngimages/918/215/png-clipart-network-illustration-computer-network-computer-icons-local-area-network-computer-servers-computer-network-electronics-computer-thumbnail.png"
-              data-full="https://www.pngegg.com/pngimages/918/215/png-clipart-network-illustration-computer-network-computer-icons-local-area-network-computer-servers-computer-network-electronics-computer-thumbnail.png"
-              alt="Schéma počítačové sítě – propojená zařízení"
-            >
-            <div class="img-caption">
-              Schéma propojených zařízení v počítačové síti. Kliknutím na obrázek jej zvětšíš.
+          <!-- ROZŠIŘUJÍCÍ UČIVO -->
+          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+          <div class="content-card extra">
+            <div class="icon-label">
+              <span>⭐</span><span><strong>Referenční model ISO/OSI</strong></span>
             </div>
+            <p>
+              V informatice se často používá <strong>referenční model ISO/OSI</strong>, který rozděluje komunikaci
+              v síti do <strong>sedmi vrstev</strong>. Každá vrstva má svůj úkol – podobně jako když v dopravě řešíme
+              zvlášť značky, cesty, vozidla, řízení provozu atd.
+            </p>
+            <p>
+              Základní informace a schémata najdeš například zde:
+              <a href="https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI" target="_blank" rel="noopener">
+                článek o modelu ISO/OSI na Wikipedii
+              </a>.
+            </p>
+            <p class="note">
+              Tato část je <strong>rozšiřující</strong> – vhodná pro zvídavé žáky nebo jako podklad pro další výklad.
+            </p>
           </div>
 
           <div class="content-card extra">
             <div class="icon-label">
-              <span>⭐</span><span><strong>Rozšiřující: vrstvy komunikace</strong></span>
+              <span>⭐</span><span><strong>Vrstvy komunikace</strong></span>
             </div>
             <p>
               V praxi se často setkáš s pojmem <strong>vrstva</strong> – například „aplikační vrstva“ nebo „síťová vrstva“.
@@ -194,6 +205,7 @@
               (adresu, cestu, obsah zprávy…) a dohromady umožňují, aby se data z jednoho zařízení spolehlivě dostala do druhého.
             </p>
           </div>
+
         </div>
       </div>
     </section>
@@ -211,6 +223,7 @@
       const modalImg = document.getElementById('img-modal-img');
       const closeBtn = document.getElementById('img-modal-close');
 
+      // Zvětšování obrázků
       document.querySelectorAll('.zoomable').forEach(function (img) {
         img.addEventListener('click', function () {
           const fullSrc = img.dataset.full || img.src;
@@ -234,6 +247,34 @@
           modal.classList.remove('open');
           modalImg.src = '';
         }
+      });
+
+      // Akordeony pro témata
+      document.querySelectorAll('.topic-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetId = btn.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          const isOpen = panel.classList.contains('open');
+
+          // Zavřít ostatní panely v rámci stejného content-card
+          const parentCard = btn.closest('.content-card');
+          parentCard.querySelectorAll('.topic-panel').forEach(function (p) {
+            p.classList.remove('open');
+          });
+          parentCard.querySelectorAll('.topic-toggle').forEach(function (b) {
+            b.classList.remove('active');
+            const arrow = b.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▾';
+          });
+
+          // Přepnout aktuální
+          if (!isOpen) {
+            panel.classList.add('open');
+            btn.classList.add('active');
+            const arrow = btn.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▴';
+          }
+        });
       });
     });
   </script>
