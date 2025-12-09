@@ -465,6 +465,13 @@ body {
   margin-bottom: 0.3rem;
 }
 
+/* Jednosloupcový layout pro stránky, kde není pravý sloupec */
+.content-grid--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 900px;        /* volitelné – aby text nebyl moc široký na velkých monitorech */
+}
+
+
 
 /* Responsivita */
 @media (max-width: 720px) {
