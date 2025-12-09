@@ -20,64 +20,328 @@
       <div class="content-label">Kapitola 2</div>
       <h1 class="content-title">Druhy počítačových sítí</h1>
 
-      <div class="content-grid">
+      <!-- Legenda k ikonám -->
+      <div class="badge-row">
+        <div class="badge badge-basic">
+          <span class="badge-ico">📘</span>
+          <span>Základní text</span>
+        </div>
+        <div class="badge badge-fun">
+          <span class="badge-ico">💡</span>
+          <span>Zajímavosti</span>
+        </div>
+        <div class="badge badge-extra">
+          <span class="badge-ico">⭐</span>
+          <span>Rozšiřující učivo</span>
+        </div>
+      </div>
+
+      <!-- Jednosloupcové rozložení -->
+      <div class="content-grid content-grid--single">
         <div class="content-body">
+
+          <!-- ÚVOD KAPITOLY + obrázek -->
           <p>
-            Počítačové sítě můžeme rozdělit podle jejich velikosti (rozsahu) a podle toho,
-            jakým způsobem jsou zařízení připojena. Pro základní orientaci stačí několik základních pojmů.
+            Počítačové sítě nejsou všechny stejné. Jinou síť používáš doma na Wi-Fi,
+            jiná propojuje počítače ve škole a další zajišťuje komunikaci mezi městy
+            nebo dokonce mezi kontinenty. Proto rozlišujeme několik základních druhů sítí.
+          </p>
+          <p>
+            V této kapitole se seznámíš s tím, jak se sítě třídí podle rozsahu
+            (například LAN, MAN, WAN) a kde se s nimi můžeš v běžném životě setkat.
+            Díky tomu budeš lépe rozumět tomu, jaké sítě používáš každý den
+            – často aniž by sis to uvědomoval.
           </p>
 
-          <div class="content-card">
-            <h3>Podle rozsahu</h3>
-            <ul>
-              <li>
-                <strong>LAN (Local Area Network)</strong> – místní síť v jedné budově nebo areálu.<br>
-                Typicky školní síť, síť v kanceláři nebo domácí síť.
-              </li>
-              <li>
-                <strong>WLAN (Wireless LAN)</strong> – bezdrátová verze LAN. Zařízení jsou připojena pomocí Wi-Fi.
-              </li>
-              <li>
-                <strong>WAN (Wide Area Network)</strong> – rozlehlá síť, která propojuje velká území
-                (města, státy, kontinenty). Nejznámější WAN je samotný internet.
-              </li>
-            </ul>
-          </div>
-
-          <div class="content-card">
-            <h3>Podle způsobu připojení</h3>
-            <ul>
-              <li>
-                <strong>Drátová síť</strong> – zařízení jsou spojena kabely (často kroucená dvojlinka UTP).
-                Připojení bývá stabilní a má nízké zpoždění.
-              </li>
-              <li>
-                <strong>Bezdrátová síť</strong> – zařízení komunikují bez kabelů (Wi-Fi, mobilní data).
-                Je pohodlná, ale může být citlivější na rušení a vzdálenost od vysílače.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <div class="content-card">
-            <h3>Kde se s jednotlivými sítěmi setkáš</h3>
-            <ul>
-              <li><strong>LAN</strong> – počítačová učebna, kancelářské počítače propojené se serverem.</li>
-              <li><strong>WLAN</strong> – domácí Wi-Fi, školní Wi-Fi, Wi-Fi v knihovně nebo kavárně.</li>
-              <li><strong>WAN</strong> – propojení sítí různých poskytovatelů internetu, spojení mezi státy.</li>
-            </ul>
-          </div>
-
           <div class="img-box">
-            <img src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Schéma propojení sítí s internetem">
+            <img
+              class="zoomable"
+              src="img/druhy-siti.png"
+              data-full="img/druhy-siti.png"
+              alt="Schéma různých druhů počítačových sítí podle rozsahu"
+            >
             <div class="img-caption">
-              Domácí nebo školní síť (LAN/WLAN) je přes router připojena k rozsáhlejší síti a nakonec k internetu.
+              Příklady různých druhů sítí podle rozsahu – od malé domácí sítě až po celosvětový internet.
             </div>
           </div>
+
+          <!-- =======================
+               ZÁKLADNÍ TEXT
+          ======================== -->
+          <h2 class="topic-section-title">📘 Základní text</h2>
+
+          <div class="content-card">
+            <!-- Téma 1 -->
+            <button class="topic-toggle" data-target="topic-zaklad-1">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Proč existují různé druhy sítí</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-zaklad-1" class="topic-panel">
+              <p>
+                Počítačová síť je propojení více zařízení, která si mezi sebou vyměňují data.
+                Záleží ale na tom, jak jsou od sebe tato zařízení daleko a kolik jich je.
+                Síť, která spojuje několik počítačů v jedné místnosti, se chová jinak než síť,
+                která propojuje celé státy.
+              </p>
+              <p>
+                Abychom v tom měli pořádek, dělíme sítě podle jejich <strong>rozsahu</strong>.
+                Nejčastěji se setkáš s těmito pojmy:
+              </p>
+              <ul>
+                <li><strong>PAN</strong> – osobní síť (např. mobil a chytré hodinky),</li>
+                <li><strong>LAN</strong> – místní síť (např. škola, domácnost, firma),</li>
+                <li><strong>MAN</strong> – městská síť (část města, větší oblast),</li>
+                <li><strong>WAN</strong> – rozlehlá síť (propojuje státy, kontinenty).</li>
+              </ul>
+              <p>
+                Nejznámější rozlehlou sítí je <strong>internet</strong>, který propojuje
+                obrovské množství menších sítí dohromady.
+              </p>
+            </div>
+
+            <!-- Téma 2 -->
+            <button class="topic-toggle" data-target="topic-zaklad-2">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>PAN a LAN – sítě, které používáš každý den</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-zaklad-2" class="topic-panel">
+              <p>
+                <strong>PAN (Personal Area Network)</strong> je <em>osobní síť</em>.
+                Tvoří ji například spojení mezi tvým mobilem a bezdrátovými sluchátky,
+                hodinkami nebo klávesnicí. Obvykle využívá Bluetooth a funguje jen
+                na několik metrů.
+              </p>
+              <p>
+                <strong>LAN (Local Area Network)</strong> je <em>místní síť</em>.
+                Patří sem typicky:
+              </p>
+              <ul>
+                <li>síť v domácnosti – router, Wi-Fi, počítače, mobily, chytrá TV,</li>
+                <li>síť ve škole – počítačové učebny, školní servery, tiskárny,</li>
+                <li>síť v menší firmě či kanceláři.</li>
+              </ul>
+              <p>
+                V LAN bývají vysoké rychlosti přenosu (např. stovky Mbit/s) a poměrně
+                nízké zpoždění, protože zařízení jsou od sebe jen na krátkou vzdálenost
+                (stejná budova, areál).
+              </p>
+            </div>
+
+            <!-- Téma 3 -->
+            <button class="topic-toggle" data-target="topic-zaklad-3">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>MAN a WAN – sítě pro města, státy a svět</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-zaklad-3" class="topic-panel">
+              <p>
+                <strong>MAN (Metropolitan Area Network)</strong> je síť, která pokrývá
+                <em>větší oblast než LAN</em>, typicky město nebo aglomeraci.
+                Může spojovat více škol, poboček firmy nebo různé části města dohromady.
+              </p>
+              <p>
+                <strong>WAN (Wide Area Network)</strong> je <em>rozlehlá síť</em>.
+                Pokrývá velmi velká území – celé státy nebo kontinenty. WAN spojuje
+                mnoho menších sítí (LAN a MAN) pomocí optických kabelů, satelitů
+                nebo dalších přenosových technologií.
+              </p>
+              <p>
+                Nejznámější WAN je <strong>internet</strong>. Není to jedna jediná síť
+                jednoho vlastníka, ale obrovská síť složená z mnoha menších sítí,
+                které jsou navzájem propojené.
+              </p>
+            </div>
+          </div>
+
+          <!-- =======================
+               ZAJÍMAVOSTI
+          ======================== -->
+          <h2 class="topic-section-title">💡 Zajímavosti</h2>
+
+          <div class="content-card fun">
+            <!-- Zajímavost 1 -->
+            <button class="topic-toggle" data-target="topic-zajim-1">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Jak velká je „síť sítí“ – internet?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-zajim-1" class="topic-panel">
+              <p>
+                Internet se často nazývá <strong>„síť sítí“</strong>, protože spojuje
+                obrovské množství menších sítí (LAN, MAN, WAN) dohromady. 
+              </p>
+              <p>
+                Data mezi kontinenty necestují „vzduchem“, ale většinou po
+                <strong>podmořských optických kabelech</strong>, které leží na dně oceánů.
+                Tyto kabely jsou dlouhé tisíce kilometrů a umožňují, aby webová stránka
+                z druhého konce světa naskočila za zlomek sekundy.
+              </p>
+            </div>
+
+            <!-- Zajímavost 2 -->
+            <button class="topic-toggle" data-target="topic-zajim-2">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Školní síť vs. domácí Wi-Fi</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-zajim-2" class="topic-panel">
+              <p>
+                Ve škole obvykle používáš <strong>LAN</strong>, která je řízená správcem sítě.
+                Ten nastavuje přístupová práva, filtry a sleduje, zda síť funguje správně.
+              </p>
+              <p>
+                Doma máš také LAN, ale většinou ji tvoří jen <strong>router/Wi-Fi</strong>
+                a několik zařízení. Pravidla si nastavují rodiče – rozhodují například,
+                zda je Wi-Fi zabezpečená, jaké heslo má síť nebo která zařízení se mohou připojit.
+              </p>
+            </div>
+          </div>
+
+          <!-- =======================
+               ROZŠIŘUJÍCÍ UČIVO
+          ======================== -->
+          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+          <div class="content-card extra">
+            <!-- Rozšíření 1 -->
+            <button class="topic-toggle" data-target="topic-rozsir-1">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Bezdrátové sítě (WLAN)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-rozsir-1" class="topic-panel">
+              <p>
+                Když se řekne LAN, mnoho lidí si dnes představí hlavně
+                <strong>bezdrátovou síť Wi-Fi</strong>. Ta se odborně označuje jako
+                <strong>WLAN (Wireless LAN)</strong> – tedy bezdrátová místní síť.
+              </p>
+              <p>
+                Místo klasických kabelů používá rádiové vlny. Výhodou je pohodlí
+                (nemusí se řešit kabely), nevýhodou může být rušení signálu
+                nebo nižší bezpečnost, pokud není dobře nastavené šifrování
+                a heslo.
+              </p>
+              <p>
+                V praxi se často kombinuje <strong>kabelová LAN</strong> (např. spojení
+                mezi routerem a školním serverem) a <strong>bezdrátová Wi-Fi</strong> 
+                pro žáky a učitele.
+              </p>
+            </div>
+
+            <!-- Rozšíření 2 -->
+            <button class="topic-toggle" data-target="topic-rozsir-2">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>VPN, intranet a firemní sítě</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topic-rozsir-2" class="topic-panel">
+              <p>
+                Firmy a instituce často využívají různé typy sítí zároveň.
+                Uvnitř firmy bývá <strong>LAN</strong>, ke které se zaměstnanci připojují
+                v kanceláři. Pro přístup z domova mohou používat <strong>VPN
+                (Virtual Private Network)</strong>, která vytvoří „šifrovaný tunel“
+                přes internet do firemní sítě.
+              </p>
+              <p>
+                Pojem <strong>intranet</strong> označuje vnitřní síť organizace (například
+                firemní nebo školní portál), která není volně přístupná z internetu.
+                Někdy existuje i <strong>extranet</strong>, který dovoluje přístup
+                vybraným partnerům mimo firmu.
+              </p>
+              <p>
+                Tyto pojmy se používají spíš ve vyšších ročnících nebo na střední škole,
+                ale je dobré o nich už teď vědět alespoň základní přehled.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Modal pro zvětšování obrázků – stejný na všech stránkách -->
+  <div class="img-modal" id="img-modal">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img id="img-modal-img" src="" alt="Zvětšený obrázek">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      // Zvětšování obrázků
+      document.querySelectorAll('.zoomable').forEach(function (img) {
+        img.addEventListener('click', function () {
+          const fullSrc = img.dataset.full || img.src;
+          modalImg.src = fullSrc;
+          modal.classList.add('open');
+        });
+      });
+
+      function closeModal(e) {
+        if (e.target === modal || e.target === closeBtn) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      }
+
+      modal.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      });
+
+      // Akordeony pro témata
+      document.querySelectorAll('.topic-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetId = btn.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          const isOpen = panel.classList.contains('open');
+
+          // Zavřít ostatní panely ve stejné card
+          const parentCard = btn.closest('.content-card');
+          parentCard.querySelectorAll('.topic-panel').forEach(function (p) {
+            p.classList.remove('open');
+          });
+          parentCard.querySelectorAll('.topic-toggle').forEach(function (b) {
+            b.classList.remove('active');
+            const arrow = b.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▾';
+          });
+
+          // Přepnout aktuální
+          if (!isOpen) {
+            panel.classList.add('open');
+            btn.classList.add('active');
+            const arrow = btn.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▴';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
