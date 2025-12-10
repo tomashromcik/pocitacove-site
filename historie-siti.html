@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Historie počítačových sítí</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="layout">
@@ -18,76 +18,329 @@
 
     <section class="content-section">
       <div class="content-label">Kapitola 3</div>
-      <h1 class="content-title">Stručná historie počítačových sítí a internetu</h1>
+      <h1 class="content-title">Historie počítačových sítí a internetu</h1>
 
-      <div class="content-grid">
+      <!-- Legenda k ikonám -->
+      <div class="badge-row">
+        <div class="badge badge-basic">
+          <span class="badge-ico">📘</span>
+          <span>Základní text</span>
+        </div>
+        <div class="badge badge-fun">
+          <span class="badge-ico">💡</span>
+          <span>Zajímavost</span>
+        </div>
+        <div class="badge badge-extra">
+          <span class="badge-ico">⭐</span>
+          <span>Rozšiřující učivo</span>
+        </div>
+      </div>
+
+      <div class="content-grid content-grid--single">
         <div class="content-body">
+
+          <!-- Úvodní odstavec + ilustrační obrázek -->
           <p>
             Dnes bereme internet jako samozřejmost. Je na telefonech, počítačích, televizích
-            a často i na hodinkách. Na začátku ale byly velké, drahé stroje, které nebyly vůbec propojené.
+            i herních konzolích. Na začátku ale existovalo jen několik málo velkých počítačů,
+            které nebyly vůbec propojené. První sítě vznikaly proto, aby si lidé mohli
+            rychleji vyměňovat informace mezi univerzitami a výzkumnými institucemi.
           </p>
-          <p>
-            První sítě vznikaly proto, aby si lidé mohli rychleji vyměňovat informace např. mezi univerzitami
-            nebo vojenskými pracovišti. Postupně se začaly používat společné protokoly a z mnoha menších sítí
-            vznikla jedna celosvětová – internet.
-          </p>
-
-          <div class="content-card">
-            <h3>Časová osa (zjednodušeno)</h3>
-            <ul>
-              <li>
-                <strong>60. léta 20. století</strong> – první pokusy propojit několik počítačů na větší vzdálenost.
-              </li>
-              <li>
-                <strong>1969 – ARPANET</strong> – síť několika univerzit v USA. Je považována za předchůdce internetu.
-              </li>
-              <li>
-                <strong>70.–80. léta</strong> – rozvoj sítí, vzniká rodina protokolů <strong>TCP/IP</strong>,
-                která umožňuje, aby spolu komunikovaly různé typy sítí.
-              </li>
-              <li>
-                <strong>90. léta</strong> – internet se šíří mezi běžné uživatele. Objevují se webové prohlížeče,
-                e-mail a první osobní webové stránky.
-              </li>
-              <li>
-                <strong>21. století</strong> – internet v mobilních telefonech, sociální sítě, cloudové služby,
-                chytré domácnosti a internet věcí.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <div class="content-card">
-            <h3>Jak se měnilo připojení k internetu</h3>
-            <ul>
-              <li>
-                <strong>Vytáčené připojení (dial-up)</strong> – internet přes telefonní linku, pomalé spojení.
-                Při připojování byl slyšet charakteristický „pískající“ zvuk.
-              </li>
-              <li>
-                <strong>ADSL a kabelové připojení</strong> – rychlejší a stabilnější internet,
-                počítač mohl být připojen delší dobu.
-              </li>
-              <li>
-                <strong>Wi-Fi</strong> – bezdrátový internet v domácnostech, školách a veřejných prostorech.
-              </li>
-              <li>
-                <strong>Mobilní data (3G, 4G, 5G)</strong> – internet v mobilu téměř kdekoliv,
-                možnost sledovat videa nebo hrát hry i mimo domov.
-              </li>
-            </ul>
-          </div>
 
           <div class="img-box">
-            <img src="https://images.pexels.com/photos/163125/board-electronics-computer-data-processing-163125.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vývoj počítačové techniky">
+            <img
+              class="zoomable"
+              src="https://images.pexels.com/photos/163125/board-electronics-computer-data-processing-163125.jpeg?auto=compress&cs=tinysrgb&w=800"
+              data-full="https://images.pexels.com/photos/163125/board-electronics-computer-data-processing-163125.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Starší elektronika a počítačové vybavení"
+            >
             <div class="img-caption">
-              Počítače i sítě prošly během několika desetiletí velkým vývojem – od obrovských strojů po dnešní malé a výkonné zařízení.
+              Starší počítačová technika – první sítě spojovaly hlavně velké a drahé stroje ve vědeckých institucích.
             </div>
           </div>
+
+          <!-- ZÁKLADNÍ TEXT -->
+          <h2 class="topic-section-title">📘 Základní text</h2>
+
+          <div class="content-card basic">
+
+            <!-- 1) Počátky sítí -->
+            <button class="topic-toggle" data-target="hist-zacatky">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Počátky počítačových sítí</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-zacatky" class="topic-panel">
+              <p>
+                V 50. a 60. letech 20. století byly počítače velmi drahé a zabíraly celé místnosti.
+                Každý pracoval většinou úplně samostatně. Postupem času vznikla potřeba
+                <strong>sdílet data</strong> a výsledky výpočtů mezi různými pracovišti.
+              </p>
+              <ul>
+                <li>první pokusy o připojení terminálů k jednomu velkému počítači,</li>
+                <li>pokusy spojit několik počítačů v rámci jedné instituce,</li>
+                <li>hledání způsobu, jak posílat data na větší vzdálenosti.</li>
+              </ul>
+              <p>
+                Tehdy ještě nikdo netušil, že z těchto experimentů vznikne jednou celosvětová síť.
+              </p>
+            </div>
+
+            <!-- 2) ARPANET -->
+            <button class="topic-toggle" data-target="hist-arpanet">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>ARPANET – předchůdce internetu</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-arpanet" class="topic-panel">
+              <p>
+                Za <strong>prvního předchůdce internetu</strong> je považována síť ARPANET, která
+                vznikla v USA koncem 60. let. Propojovala několik univerzit a výzkumných center.
+              </p>
+              <ul>
+                <li>první spojení bylo navázáno roku 1969,</li>
+                <li>cílem bylo zajistit komunikaci mezi vědci i při výpadku části sítě,</li>
+                <li>postupně se síť rozšiřovala o další uzly.</li>
+              </ul>
+              <p>
+                Myšlenka byla jednoduchá: pokud se některý uzel porouchá, data mohou putovat jinou cestou.
+                Tato <strong>„síť sítí“</strong> se stala základem myšlení, ze kterého později vznikl internet.
+              </p>
+            </div>
+
+            <!-- 3) TCP/IP a internet -->
+            <button class="topic-toggle" data-target="hist-tcpip">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Od ARPANETu k internetu (TCP/IP)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-tcpip" class="topic-panel">
+              <p>
+                V 70. a 80. letech vědci hledali způsob, jak propojit různé sítě dohromady tak,
+                aby spolu dokázaly komunikovat. Výsledkem byly protokoly <strong>TCP/IP</strong>.
+              </p>
+              <ul>
+                <li>zajistily jednotný způsob balení a doručování dat,</li>
+                <li>umožnily propojit různé typy sítí do jedné velké sítě,</li>
+                <li>roku 1983 na ně přešel právě i ARPANET – často se to označuje za „narození internetu“.</li>
+              </ul>
+              <p>
+                Od té doby mluvíme o internetu jako o <strong>celosvětové síti sítí</strong>,
+                které používají společná pravidla komunikace.
+              </p>
+            </div>
+
+            <!-- 4) Web a rozšíření internetu -->
+            <button class="topic-toggle" data-target="hist-www">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>World Wide Web a rozšíření mezi veřejnost</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-www" class="topic-panel">
+              <p>
+                Dalším velkým krokem byl vznik <strong>World Wide Webu (WWW)</strong>
+                na začátku 90. let. Ten umožnil vytvářet a prohlížet webové stránky
+                pomocí prohlížeče.
+              </p>
+              <ul>
+                <li>objevují se první webové prohlížeče a stránky,</li>
+                <li>internet se šíří z univerzit do firem a domácností,</li>
+                <li>během 90. let se z internetu stává běžná součást života ve vyspělých zemích.</li>
+              </ul>
+              <p>
+                Dnes už si bez internetu neumíme běžný život moc představit – používáme ho
+                ke komunikaci, práci, zábavě i studiu.
+              </p>
+            </div>
+          </div>
+
+          <!-- ZAJÍMAVOSTI -->
+          <h2 class="topic-section-title">💡 Zajímavosti</h2>
+
+          <div class="content-card fun">
+
+            <!-- Zajímavost: první zpráva -->
+            <button class="topic-toggle" data-target="hist-prvni-zprava">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Jak vypadala první zpráva v ARPANETu?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-prvni-zprava" class="topic-panel">
+              <p>
+                Když se vědci pokusili poslat po ARPANETu první zprávu, chtěli napsat slovo
+                <strong>„LOGIN“</strong>. Do cílového počítače však dorazily jen první dvě písmena:
+                <strong>„LO“</strong>. Systém spadl a zbytek slova už nedošel.
+              </p>
+              <p>
+                I velké věci tak někdy začínají drobným nezdarem – přesto šlo o historický okamžik.
+              </p>
+            </div>
+
+            <!-- Zajímavost: @ v e-mailu -->
+            <button class="topic-toggle" data-target="hist-zavinac">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Proč máme v e-mailu zavináč?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-zavinac" class="topic-panel">
+              <p>
+                Symbol <strong>@</strong> byl vybrán proto, že se v běžném textu téměř nepoužíval
+                a jasně odděloval jméno uživatele od názvu počítače nebo domény.
+              </p>
+              <p>
+                Dnes je „zavináč“ jedním z nejznámějších symbolů internetu a elektronické komunikace.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- ROZŠIŘUJÍCÍ UČIVO -->
+          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+          <div class="content-card extra">
+
+            <!-- Rozšíření: vývoj rychlosti -->
+            <button class="topic-toggle" data-target="hist-rychlosti">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Jak se měnila rychlost připojení k internetu</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-rychlosti" class="topic-panel">
+              <p>
+                První připojení pro domácnosti bylo velmi pomalé – tzv. <strong>vytáčené připojení</strong>
+                (dial-up) přes telefonní linku. Rychlost se pohybovala v řádu <strong>kilobitů za sekundu</strong>.
+              </p>
+              <ul>
+                <li><strong>dial-up</strong> – internet byl slyšet jako „pískání“ modemu a při připojení nešlo telefonovat,</li>
+                <li><strong>ADSL a kabelový internet</strong> – vyšší rychlost, počítač mohl být připojený dlouhodobě,</li>
+                <li><strong>Wi-Fi</strong> – rozšíření internetu v domácnostech a školách bez kabelů,</li>
+                <li><strong>3G / 4G / 5G</strong> – mobilní internet, který máme dnes v telefonech a tabletech.</li>
+              </ul>
+              <p>
+                Díky tomu dnes můžeme sledovat videa, hrát online hry nebo pracovat v cloudu prakticky odkudkoliv.
+              </p>
+            </div>
+
+            <!-- Rozšíření: podmořské kabely -->
+            <button class="topic-toggle" data-target="hist-kabely">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Podmořské optické kabely</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="hist-kabely" class="topic-panel">
+              <p>
+                Data mezi kontinenty většinou necestují „vzduchem“, ale po <strong>podmořských optických kabelech</strong>,
+                které leží na dně oceánů. Tyto kabely jsou dlouhé tisíce kilometrů a spojují Evropu,
+                Ameriku, Asii i další části světa.
+              </p>
+
+              <div class="img-box">
+                <img
+                  class="zoomable"
+                  src="https://www.submarinecablemap.com/img/submarine-cable-map.jpg"
+                  data-full="https://www.submarinecablemap.com/img/submarine-cable-map.jpg"
+                  alt="Mapa podmořských optických kabelů"
+                >
+                <div class="img-caption">
+                  Ilustrační mapa podmořských optických kabelů, které propojují kontinenty.
+                </div>
+              </div>
+
+              <p>
+                Když si tedy otevřeš web, který je uložený na serveru v jiné zemi, je velká šance,
+                že data prošla právě některým z těchto kabelů.
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Modal pro zvětšování obrázků -->
+  <div class="img-modal" id="img-modal">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img id="img-modal-img" src="" alt="Zvětšený obrázek">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      // Zvětšování obrázků
+      document.querySelectorAll('.zoomable').forEach(function (img) {
+        img.addEventListener('click', function () {
+          const fullSrc = img.dataset.full || img.src;
+          modalImg.src = fullSrc;
+          modal.classList.add('open');
+        });
+      });
+
+      function closeModal(e) {
+        if (e.target === modal || e.target === closeBtn) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      }
+
+      modal.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      });
+
+      // Akordeony pro témata
+      document.querySelectorAll('.topic-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetId = btn.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          const isOpen = panel.classList.contains('open');
+
+          // Zavřít ostatní panely v rámci stejného content-card
+          const parentCard = btn.closest('.content-card');
+          parentCard.querySelectorAll('.topic-panel').forEach(function (p) {
+            p.classList.remove('open');
+          });
+          parentCard.querySelectorAll('.topic-toggle').forEach(function (b) {
+            b.classList.remove('active');
+            const arrow = b.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▾';
+          });
+
+          // Přepnout aktuální
+          if (!isOpen) {
+            panel.classList.add('open');
+            btn.classList.add('active');
+            const arrow = btn.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▴';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
