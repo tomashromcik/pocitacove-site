@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Prvky počítačové sítě</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="layout">
@@ -16,22 +16,445 @@
       <a href="index.html" class="back-link">← Zpět na přehled témat</a>
     </header>
 
-    <section class="content-section placeholder">
+    <section class="content-section">
       <div class="content-label">Kapitola 4</div>
       <h1 class="content-title">Prvky počítačové sítě</h1>
 
-      <div class="placeholder-flag">
-        Tato kapitola bude brzy doplněna.
+      <!-- Legenda k ikonám -->
+      <div class="badge-row">
+        <div class="badge badge-basic">
+          <span class="badge-ico">📘</span>
+          <span>Základní text</span>
+        </div>
+        <div class="badge badge-fun">
+          <span class="badge-ico">💡</span>
+          <span>Zajímavost</span>
+        </div>
+        <div class="badge badge-extra">
+          <span class="badge-ico">⭐</span>
+          <span>Rozšiřující učivo</span>
+        </div>
       </div>
 
-      <p>
-        V této části budou postupně přidány materiály o jednotlivých prvcích počítačové sítě –
-        například koncová zařízení, switche, routery, přístupové body, servery a síťové kabely.
-      </p>
-      <p>
-        Sleduj tuto stránku, další obsah bude přidáván postupně.
-      </p>
+      <div class="content-grid content-grid--single">
+        <div class="content-body">
+
+          <p>
+            V počítačové síti najdeme mnoho různých zařízení. Některá vidíme každý den – například počítač,
+            notebook nebo Wi-Fi router doma. Jiná jsou schovaná ve skříni v serverovně nebo někde u poskytovatele
+            internetu. Všechna ale mají v síti svůj úkol.
+          </p>
+
+          <div class="img-box">
+            <img
+              class="zoomable"
+              src="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&w=800"
+              data-full="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Síťové prvky v rozvaděči"
+            >
+            <div class="img-caption">
+              Síťové prvky v rozvaděči – switche, routery a kabely, které propojují jednotlivá zařízení.
+            </div>
+          </div>
+
+          <!-- ZÁKLADNÍ TEXT -->
+          <h2 class="topic-section-title">📘 Základní text</h2>
+
+          <div class="content-card basic">
+
+            <!-- Koncová zařízení -->
+            <button class="topic-toggle" data-target="prvky-koncova">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Koncová zařízení</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-koncova" class="topic-panel">
+              <p>
+                Koncová zařízení jsou ta, která používá přímo uživatel. Připojují se do sítě a využívají její služby.
+              </p>
+              <ul>
+                <li><strong>Počítač / notebook</strong> – nejčastější zařízení pro práci i zábavu.</li>
+                <li><strong>Mobilní telefon</strong> – připojený přes Wi-Fi nebo mobilní data.</li>
+                <li><strong>Tablet</strong> – dotykové zařízení, často používané ve škole.</li>
+                <li><strong>Tiskárna</strong> – může být připojená kabelem nebo přes Wi-Fi a sdílena více uživateli.</li>
+                <li><strong>Server</strong> – výkonný počítač, který poskytuje služby ostatním (např. sdílené složky ve škole).</li>
+              </ul>
+            </div>
+
+            <!-- Aktivní prvky -->
+            <button class="topic-toggle" data-target="prvky-aktivni">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Aktivní síťové prvky</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-aktivni" class="topic-panel">
+              <p>
+                Aktivní prvky <strong>zpracovávají a směrují data</strong> v síti. Bez nich by se balíčky dat
+                nedostaly na správné místo.
+              </p>
+              <ul>
+                <li>
+                  <strong>Switch</strong> – „rozdělovač“ v síti. Propojuje více zařízení v jedné místní síti (LAN)
+                  a posílá data tam, kam patří.
+                </li>
+                <li>
+                  <strong>Router</strong> – zařízení, které spojuje různé sítě. Doma spojuje vaši domácí síť s internetem.
+                </li>
+                <li>
+                  <strong>Access point (AP)</strong> – přístupový bod Wi-Fi. Připojuje bezdrátová zařízení k síti.
+                </li>
+              </ul>
+
+              <div class="img-box">
+                <img
+                  class="zoomable"
+                  src="https://images.pexels.com/photos/2881234/pexels-photo-2881234.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  data-full="https://images.pexels.com/photos/2881234/pexels-photo-2881234.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Síťový switch"
+                >
+                <div class="img-caption">
+                  Síťový switch – zařízení, které propojuje více počítačů a dalších prvků v místní síti.
+                </div>
+              </div>
+            </div>
+
+            <!-- Pasivní prvky -->
+            <button class="topic-toggle" data-target="prvky-pasivni">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Pasivní prvky (kabeláž)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-pasivni" class="topic-panel">
+              <p>
+                Pasivní prvky samy nic „nepočítají“, ale vytvářejí <strong>cestu pro data</strong>.
+              </p>
+              <ul>
+                <li><strong>UTP kabel</strong> – nejběžnější síťový kabel pro připojení počítačů.</li>
+                <li><strong>RJ-45 konektor</strong> – konec kabelu, který zapojíme do zásuvky nebo zařízení.</li>
+                <li><strong>Datová zásuvka / patch panel</strong> – místo, kde se sbíhají kabely ze tříd a učeben.</li>
+                <li><strong>Rozvaděč (rack skříň)</strong> – skříň, ve které jsou switche, routery a kabely přehledně uspořádány.</li>
+              </ul>
+            </div>
+
+            <!-- Síťová karta -->
+            <button class="topic-toggle" data-target="prvky-nic">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Síťová karta</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-nic" class="topic-panel">
+              <p>
+                Aby se vůbec mohl počítač připojit do sítě, potřebuje <strong>síťovou kartu</strong>.
+              </p>
+              <ul>
+                <li>
+                  v notebooku bývá síťová karta pro kabel (RJ-45) i <strong>Wi-Fi karta</strong> pro bezdrátové připojení,
+                </li>
+                <li>
+                  u stolních PC může být síťová karta jako samostatná součástka zasunutá do základní desky,
+                </li>
+                <li>
+                  každá síťová karta má svoji <strong>MAC adresu</strong> – jedinečný identifikátor zařízení v síti.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ZAJÍMAVOSTI -->
+          <h2 class="topic-section-title">💡 Zajímavosti</h2>
+
+          <div class="content-card fun">
+
+            <!-- Wi-Fi signál -->
+            <button class="topic-toggle" data-target="prvky-wifi">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Jak funguje Wi-Fi signál?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-wifi" class="topic-panel">
+              <p>
+                Wi-Fi přenáší data pomocí <strong>rádiových vln</strong>. Router nebo access point vysílá signál
+                na určitých frekvencích (např. 2,4 GHz nebo 5 GHz).
+              </p>
+              <ul>
+                <li>
+                  signál může zeslabovat vzdálenost, zdi, kovové předměty nebo rušení z jiných zařízení,
+                </li>
+                <li>
+                  Wi-Fi používá různé <strong>kanály</strong>, aby se sítě vzájemně tolik nerušily,
+                </li>
+                <li>
+                  proto může být na některých místech ve škole nebo doma signál výrazně slabší.
+                </li>
+              </ul>
+
+              <div class="img-box">
+                <img
+                  class="zoomable"
+                  src="https://images.pexels.com/photos/5634525/pexels-photo-5634525.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  data-full="https://images.pexels.com/photos/5634525/pexels-photo-5634525.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Domácí Wi-Fi router"
+                >
+                <div class="img-caption">
+                  Domácí Wi-Fi router – vysílá bezdrátový signál, ke kterému se připojují telefony, notebooky a další zařízení.
+                </div>
+              </div>
+            </div>
+
+            <!-- Optický kabel -->
+            <button class="topic-toggle" data-target="prvky-optika">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Optický kabel – data jako světlo</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-optika" class="topic-panel">
+              <p>
+                V optickém kabelu se data přenášejí pomocí <strong>světelných pulsů</strong>.
+                Světlo prochází tenkým skleněným nebo plastovým vláknem uvnitř kabelu.
+              </p>
+              <ul>
+                <li>velmi vysoké rychlosti přenosu,</li>
+                <li>malé ztráty na velké vzdálenosti,</li>
+                <li>není citlivý na elektromagnetické rušení jako běžné kovové kabely.</li>
+              </ul>
+            </div>
+
+            <!-- Powerline -->
+            <button class="topic-toggle" data-target="prvky-powerline">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Internet z elektrické zásuvky (powerline)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-powerline" class="topic-panel">
+              <p>
+                <strong>Powerline adaptéry</strong> umožňují přenášet data po běžných elektrických rozvodech v domě.
+                Do zásuvky se zapojí dva adaptéry – jeden u routeru, druhý u počítače.
+              </p>
+              <p>
+                Není to řešení pro každý případ, ale může pomoci tam, kde se nehodí tahat nové kabely
+                a Wi-Fi má slabý signál.
+              </p>
+            </div>
+
+            <!-- NAS -->
+            <button class="topic-toggle" data-target="prvky-nas">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>NAS – domácí síťový disk</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-nas" class="topic-panel">
+              <p>
+                <strong>NAS</strong> (Network Attached Storage) je speciální zařízení, které slouží jako
+                <strong>síťový disk</strong>. Ukládají se na něj soubory, ke kterým mají přístup všechna zařízení v síti.
+              </p>
+              <p>
+                V domácnostech se používá například pro rodinné fotky a videa, ve firmách a školách pro sdílené dokumenty.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- ROZŠIŘUJÍCÍ UČIVO -->
+          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+          <div class="content-card extra">
+
+            <!-- Firewall -->
+            <button class="topic-toggle" data-target="prvky-firewall">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Firewall – hlídač sítě</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-firewall" class="topic-panel">
+              <p>
+                <strong>Firewall</strong> funguje jako <strong>hlídač na bráně</strong> sítě. Sleduje,
+                jaká data do sítě přicházejí a jaká z ní odcházejí, a podle nastavených pravidel je povolí nebo zablokuje.
+              </p>
+              <ul>
+                <li>chrání síť před nepovolenými přístupy z internetu,</li>
+                <li>může blokovat podezřelý provoz,</li>
+                <li>používá se ve firmách, školách i domácnostech (součást routeru).</li>
+              </ul>
+            </div>
+
+            <!-- Modem -->
+            <button class="topic-toggle" data-target="prvky-modem">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Modem – spojení s poskytovatelem internetu</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-modem" class="topic-panel">
+              <p>
+                <strong>Modem</strong> převádí signál od poskytovatele internetu (po telefonní lince, koaxiálním kabelu,
+                optice nebo mobilní síti) na data, kterým rozumí router a další zařízení v síti.
+              </p>
+              <p>
+                V mnoha domácnostech je modem a router v jednom zařízení, takže si rozdíl ani neuvědomíme.
+              </p>
+            </div>
+
+            <!-- Proxy server -->
+            <button class="topic-toggle" data-target="prvky-proxy">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Proxy server</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-proxy" class="topic-panel">
+              <p>
+                <strong>Proxy server</strong> je prostředník mezi uživatelem a internetem.
+                Požadavky z vnitřní sítě posílá dál a odpovědi vrací zpět.
+              </p>
+              <ul>
+                <li>může ukládat často navštěvované stránky do mezipaměti (rychlejší načítání),</li>
+                <li>může filtrovat obsah (například blokovat nevhodné stránky ve škole),</li>
+                <li>pomáhá skrýt vnitřní strukturu sítě.</li>
+              </ul>
+            </div>
+
+            <!-- UPS -->
+            <button class="topic-toggle" data-target="prvky-ups">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>UPS – záložní zdroj</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-ups" class="topic-panel">
+              <p>
+                <strong>UPS</strong> (Uninterruptible Power Supply) je záložní zdroj, který krátkodobě
+                napájí důležitá zařízení při výpadku proudu.
+              </p>
+              <ul>
+                <li>chrání servery a switche před náhlým vypnutím,</li>
+                <li>umožní bezpečně uložit práci a vypnout zařízení,</li>
+                <li>v domácnosti může udržet v chodu alespoň router a modem.</li>
+              </ul>
+            </div>
+
+            <!-- Datové centrum -->
+            <button class="topic-toggle" data-target="prvky-dc">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Datové centrum</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="prvky-dc" class="topic-panel">
+              <p>
+                Velké internetové služby (např. vyhledávače, cloud nebo sociální sítě) běží v
+                <strong>datových centrech</strong>. Jsou to budovy plné serverů a síťových prvků.
+              </p>
+
+              <div class="img-box">
+                <img
+                  class="zoomable"
+                  src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  data-full="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Servery v datovém centru"
+                >
+                <div class="img-caption">
+                  Servery v datovém centru. V takových místnostech běží služby, které používáme každý den na internetu.
+                </div>
+              </div>
+
+              <p>
+                Datová centra musí mít kvalitní chlazení, záložní zdroje a velmi rychlé připojení k internetu.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
+
+  <!-- Modal pro zvětšování obrázků -->
+  <div class="img-modal" id="img-modal">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img id="img-modal-img" src="" alt="Zvětšený obrázek">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      // Zvětšování obrázků
+      document.querySelectorAll('.zoomable').forEach(function (img) {
+        img.addEventListener('click', function () {
+          const fullSrc = img.dataset.full || img.src;
+          modalImg.src = fullSrc;
+          modal.classList.add('open');
+        });
+      });
+
+      function closeModal(e) {
+        if (e.target === modal || e.target === closeBtn) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      }
+
+      modal.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      });
+
+      // Akordeony pro témata
+      document.querySelectorAll('.topic-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetId = btn.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          const isOpen = panel.classList.contains('open');
+
+          const parentCard = btn.closest('.content-card');
+          parentCard.querySelectorAll('.topic-panel').forEach(function (p) {
+            p.classList.remove('open');
+          });
+          parentCard.querySelectorAll('.topic-toggle').forEach(function (b) {
+            b.classList.remove('active');
+            const arrow = b.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▾';
+          });
+
+          if (!isOpen) {
+            panel.classList.add('open');
+            btn.classList.add('active');
+            const arrow = btn.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▴';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
