@@ -332,6 +332,11 @@ body {
 }
 
 /* Barevné zvýraznění typů boxů (navazuje na .content-card) */
+
+.content-card.basic {
+  border-left: 4px solid #4ade80; /* zelená */
+}
+
 .content-card.extra {
   border-left: 4px solid #4a148c;
 }
