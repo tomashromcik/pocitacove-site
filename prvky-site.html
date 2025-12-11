@@ -85,43 +85,106 @@
             </div>
 
             <!-- Aktivní prvky -->
-            <button class="topic-toggle" data-target="prvky-aktivni">
-              <span class="topic-label">
-                <span class="topic-icon">📘</span>
-                <span>Aktivní síťové prvky</span>
-              </span>
-              <span class="topic-arrow">▾</span>
-            </button>
-            <div id="prvky-aktivni" class="topic-panel">
-              <p>
-                Aktivní prvky <strong>zpracovávají a směrují data</strong> v síti. Bez nich by se balíčky dat
-                nedostaly na správné místo.
-              </p>
-              <ul>
-                <li>
-                  <strong>Switch</strong> – „rozdělovač“ v síti. Propojuje více zařízení v jedné místní síti (LAN)
-                  a posílá data tam, kam patří.
-                </li>
-                <li>
-                  <strong>Router</strong> – zařízení, které spojuje různé sítě. Doma spojuje vaši domácí síť s internetem.
-                </li>
-                <li>
-                  <strong>Access point (AP)</strong> – přístupový bod Wi-Fi. Připojuje bezdrátová zařízení k síti.
-                </li>
-              </ul>
+           <button class="topic-toggle" data-target="prvky-aktivni">
+  <span class="topic-label">
+    <span class="topic-icon">📘</span>
+    <span>Aktivní síťové prvky</span>
+  </span>
+  <span class="topic-arrow">▾</span>
+</button>
+<div id="prvky-aktivni" class="topic-panel">
+  <p>
+    Aktivní prvky <strong>řídí pohyb dat</strong> v síti. Rozhodují, kudy půjdou datové balíčky
+    (pakety) a ke kterému zařízení mají dorazit.
+  </p>
 
-              <div class="img-box">
-                <img
-                  class="zoomable"
-                  src="https://images.pexels.com/photos/2881234/pexels-photo-2881234.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  data-full="https://images.pexels.com/photos/2881234/pexels-photo-2881234.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                  alt="Síťový switch"
-                >
-                <div class="img-caption">
-                  Síťový switch – zařízení, které propojuje více počítačů a dalších prvků v místní síti.
-                </div>
-              </div>
-            </div>
+  <h3>1) Switch – „přepínač“</h3>
+  <p>
+    <strong>Switch</strong> propojuje více zařízení v místní síti (LAN). Funguje jako chytrý
+    „rozdělovač“:
+  </p>
+  <ul>
+    <li>přijme datový balíček od jednoho zařízení,</li>
+    <li>podle <strong>MAC adresy</strong> pozná, komu patří,</li>
+    <li>pošle ho jen tomu zařízení, které je příjemcem.</li>
+  </ul>
+  <p>
+    Díky tomu se zbytečně nezaplňuje celá síť a komunikace je rychlejší a přehlednější.
+    Switch je jako <strong>poštovní třídírna</strong> – balík pošle na správnou adresu.
+  </p>
+
+  <h3>2) Router – propojuje sítě a přiděluje IP adresy</h3>
+  <p>
+    <strong>Router</strong> spojuje dvě různé sítě – například domácí síť a internet.
+    Doma má dvě hlavní role:
+  </p>
+  <ul>
+    <li>
+      pomocí funkce <strong>DHCP</strong> přiděluje zařízením v síti
+      jejich <strong>IP adresy</strong> (např. <code>192.168.25.1</code>, <code>192.168.25.5</code>…),
+    </li>
+    <li>
+      rozhoduje, kudy mají data z domácí sítě odcházet ven a kudy se mají vracet zpátky
+      – tomu se říká <strong>směrování</strong> (routing).
+    </li>
+  </ul>
+  <p>
+    Router je jako <strong>dispečer na křižovatce</strong> – autům (datům) ukazuje správný směr.
+    Často v sobě má i <strong>firewall</strong>, který hlídá, aby se do sítě nedostalo něco nebezpečného.
+  </p>
+
+  <h3>3) Access Point (AP) – Wi-Fi pro bezdrátová zařízení</h3>
+  <p>
+    <strong>Access Point</strong> (AP) zajišťuje <strong>bezdrátové připojení</strong> do sítě.
+    Připojuje mobily, notebooky a tablety k routeru a dalším zařízením.
+  </p>
+  <p>Wi-Fi má několik generací, které se liší rychlostí a použitou frekvencí:</p>
+  <ul>
+    <li><strong>Wi-Fi 4 (802.11n)</strong> – starší, ale stále běžná, funguje na 2,4 i 5 GHz,</li>
+    <li><strong>Wi-Fi 5 (802.11ac)</strong> – dnes nejčastější domácí Wi-Fi, rychlá a stabilní,</li>
+    <li><strong>Wi-Fi 6 (802.11ax)</strong> – moderní Wi-Fi, lépe zvládá mnoho zařízení najednou.</li>
+  </ul>
+  <p>
+    Access point je jako <strong>rozhlasový vysílač</strong> – místo hudby vysílá „internetový signál“,
+    ke kterému se zařízení připojují.
+  </p>
+
+  <!-- Jednoduché schéma: PC → switch → router → internet -->
+  <div class="net-schema">
+    <p style="font-size:0.85rem; color:#cbd5f5; margin-bottom:0.4rem;">
+      Schéma: počítač posílá data přes switch a router do internetu. Tečka představuje datový balíček.
+    </p>
+    <svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Klient vlevo -->
+      <rect x="10" y="35" width="80" height="50" rx="8" ry="8" fill="#1e293b" stroke="#94a3b8"/>
+      <text x="50" y="63" fill="#e5e7eb" font-size="11" text-anchor="middle">PC / mobil</text>
+
+      <!-- Switch -->
+      <rect x="150" y="35" width="80" height="50" rx="8" ry="8" fill="#0f172a" stroke="#38bdf8"/>
+      <text x="190" y="55" fill="#e5e7eb" font-size="11" text-anchor="middle">Switch</text>
+      <text x="190" y="69" fill="#9ca3af" font-size="9" text-anchor="middle">„přepínač“</text>
+
+      <!-- Router -->
+      <rect x="290" y="35" width="80" height="50" rx="8" ry="8" fill="#0f172a" stroke="#34d399"/>
+      <text x="330" y="55" fill="#e5e7eb" font-size="11" text-anchor="middle">Router</text>
+      <text x="330" y="69" fill="#9ca3af" font-size="9" text-anchor="middle">IP adresy</text>
+
+      <!-- Internet (cloud) -->
+      <ellipse cx="440" cy="60" rx="55" ry="28" fill="#020617" stroke="#94a3b8"/>
+      <text x="440" y="63" fill="#e5e7eb" font-size="11" text-anchor="middle">Internet</text>
+
+      <!-- Spojovací linky -->
+      <line x1="90" y1="60" x2="150" y2="60" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+      <line x1="230" y1="60" x2="290" y2="60" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+      <line x1="370" y1="60" x2="385" y2="60" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+      <line x1="495" y1="60" x2="480" y2="60" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Animovaný datový balíček -->
+      <circle class="packet-dot" cx="90" cy="60" r="5" fill="#facc15"/>
+    </svg>
+  </div>
+</div>
+
 
             <!-- Pasivní prvky -->
             <button class="topic-toggle" data-target="prvky-pasivni">
