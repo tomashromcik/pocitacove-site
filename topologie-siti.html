@@ -1,1 +1,399 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Topologie počítačových sítí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="headbar">
+      <div>
+        <div class="headbar-title">Počítačové sítě</div>
+        <div class="headbar-tagline">Studijní opora pro 8. ročník ZŠ</div>
+      </div>
+      <a href="index.html" class="back-link">← Zpět na přehled témat</a>
+    </header>
 
+    <section class="content-section">
+      <div class="content-label">Kapitola 5</div>
+      <h1 class="content-title">Topologie počítačových sítí</h1>
+
+      <!-- Legenda k ikonám -->
+      <div class="badge-row">
+        <div class="badge badge-basic">
+          <span class="badge-ico">📘</span>
+          <span>Základní text</span>
+        </div>
+        <div class="badge badge-fun">
+          <span class="badge-ico">💡</span>
+          <span>Zajímavost</span>
+        </div>
+        <div class="badge badge-extra">
+          <span class="badge-ico">⭐</span>
+          <span>Rozšiřující učivo</span>
+        </div>
+      </div>
+
+      <div class="content-grid content-grid--single">
+        <div class="content-body">
+
+          <p>
+            <strong>Topologie sítě</strong> popisuje, jak jsou zařízení v síti uspořádána a propojena.
+            Může jít o skutečné zapojení kabelů (fyzická topologie) nebo o to, jak se data v síti chovají
+            a kudy obvykle „tečou“ (logická topologie). Různé topologie mají různé výhody a nevýhody –
+            některé jsou levné, jiné zase spolehlivější.
+          </p>
+
+          <div class="img-box">
+            <img
+              class="zoomable"
+              src="img/topologie-prehled.jpg"
+              data-full="img/topologie-prehled.jpg"
+              alt="Přehled topologií počítačových sítí"
+            >
+            <div class="img-caption">
+              Přehled topologií (schéma). Kliknutím na obrázek jej zvětšíš.
+            </div>
+          </div>
+
+          <!-- ZÁKLADNÍ TEXT -->
+          <h2 class="topic-section-title">📘 Základní text</h2>
+
+          <div class="content-card basic">
+
+            <!-- BUS -->
+            <button class="topic-toggle" data-target="topo-bus">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Sběrnicová topologie (Bus)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-bus" class="topic-panel">
+              <p>
+                U sběrnicové topologie jsou všechna zařízení připojena k jednomu společnému kabelu (sběrnici).
+                Data se šíří po této „hlavní trase“ a zařízení si z nich vybere to, co je určené pro něj.
+              </p>
+
+              <p><strong>Výhody:</strong></p>
+              <ul>
+                <li>jednoduché zapojení,</li>
+                <li>méně kabelů (levnější),</li>
+                <li>v minulosti se používala často.</li>
+              </ul>
+
+              <p><strong>Nevýhody:</strong></p>
+              <ul>
+                <li>porucha hlavního kabelu může zastavit celou síť,</li>
+                <li>horší hledání závad,</li>
+                <li>při větším počtu zařízení může být síť pomalejší.</li>
+              </ul>
+
+              <p><strong>Realizace:</strong> historicky koaxiální kabel (starší ethernet).</p>
+              <p><strong>Použitelnost:</strong> dnes spíše výjimečně, v moderních LAN se téměř nepoužívá.</p>
+            </div>
+
+            <!-- RING -->
+            <button class="topic-toggle" data-target="topo-ring">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Kruhová topologie (Ring)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-ring" class="topic-panel">
+              <p>
+                V kruhové topologii jsou zařízení propojena do kruhu. Data putují postupně od zařízení k zařízení,
+                dokud nedorazí k cíli.
+              </p>
+
+              <p><strong>Výhody:</strong></p>
+              <ul>
+                <li>data mohou putovat řízeně v jednom směru,</li>
+                <li>při správném řešení je komunikace přehledná.</li>
+              </ul>
+
+              <p><strong>Nevýhody:</strong></p>
+              <ul>
+                <li>výpadek jednoho zařízení nebo kabelu může přerušit kruh,</li>
+                <li>rozšiřování sítě je složitější.</li>
+              </ul>
+
+              <p><strong>Realizace:</strong> historicky např. Token Ring; existují i „dvojité kruhy“ pro větší spolehlivost.</p>
+              <p><strong>Použitelnost:</strong> dnes spíš v průmyslu nebo speciálních řešeních, ne v běžných školních LAN.</p>
+            </div>
+
+            <!-- STAR -->
+            <button class="topic-toggle" data-target="topo-star">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Hvězdicová topologie (Star)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-star" class="topic-panel">
+              <p>
+                Hvězdicová topologie je dnes nejběžnější. Všechna zařízení jsou připojena do jednoho
+                centrálního prvku (nejčastěji <strong>switch</strong> nebo domácí <strong>router</strong>).
+              </p>
+
+              <p><strong>Výhody:</strong></p>
+              <ul>
+                <li>když se pokazí jeden kabel/počítač, ostatní většinou fungují dál,</li>
+                <li>snadné rozšiřování – připojíš další zařízení do switche,</li>
+                <li>dobrá přehlednost a správa.</li>
+              </ul>
+
+              <p><strong>Nevýhody:</strong></p>
+              <ul>
+                <li>když se pokazí centrální prvek (switch/router), síť přestane fungovat,</li>
+                <li>více kabelů než u sběrnice.</li>
+              </ul>
+
+              <p><strong>Realizace:</strong> typicky ethernet (UTP kabely) + switch; u Wi-Fi je centrem access point/router.</p>
+              <p><strong>Použitelnost:</strong> domácnosti, školy, firmy – prakticky všude.</p>
+            </div>
+
+            <!-- TREE -->
+            <button class="topic-toggle" data-target="topo-tree">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Stromová topologie (Tree)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-tree" class="topic-panel">
+              <p>
+                Stromová topologie je vlastně „hvězda z více hvězd“. Centrální prvek spojuje další switche,
+                které pak spojují zařízení v jednotlivých učebnách nebo patrech.
+              </p>
+
+              <p><strong>Výhody:</strong></p>
+              <ul>
+                <li>dobře se hodí pro větší budovy (škola, firma),</li>
+                <li>snadné rozšiřování přidáním další „větve“,</li>
+                <li>přehledná struktura.</li>
+              </ul>
+
+              <p><strong>Nevýhody:</strong></p>
+              <ul>
+                <li>když vypadne „kmen“ (hlavní propojení), může odpojit celou část sítě,</li>
+                <li>vyžaduje plánování, aby byla síť rychlá a stabilní.</li>
+              </ul>
+
+              <p><strong>Realizace:</strong> více switchů propojených hierarchicky (core/distribution/access).</p>
+              <p><strong>Použitelnost:</strong> školy, firmy, vícepatrové budovy, větší LAN s více místnostmi.</p>
+            </div>
+
+            <!-- MESH -->
+            <button class="topic-toggle" data-target="topo-mesh">
+              <span class="topic-label">
+                <span class="topic-icon">📘</span>
+                <span>Síťová topologie (Mesh)</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-mesh" class="topic-panel">
+              <p>
+                V mesh topologii je více zařízení propojeno mezi sebou „do sítě“. Existuje:
+                <strong>plná mesh</strong> (každý s každým) a <strong>částečná mesh</strong>
+                (jen některé propojení). Cílem je vysoká spolehlivost.
+              </p>
+
+              <p><strong>Výhody:</strong></p>
+              <ul>
+                <li>velká spolehlivost – když jedna cesta nefunguje, data jdou jinudy,</li>
+                <li>hodí se pro důležité sítě.</li>
+              </ul>
+
+              <p><strong>Nevýhody:</strong></p>
+              <ul>
+                <li>hodně propojení = vyšší cena a složitost,</li>
+                <li>náročnější správa.</li>
+              </ul>
+
+              <p><strong>Realizace:</strong> páteřní sítě, propojení mezi routery, některé Wi-Fi mesh systémy.</p>
+              <p><strong>Použitelnost:</strong> internetová infrastruktura, datová centra, speciální bezdrátové sítě.</p>
+            </div>
+          </div>
+
+          <!-- ZAJÍMAVOSTI -->
+          <h2 class="topic-section-title">💡 Zajímavosti</h2>
+
+          <div class="content-card fun">
+
+            <button class="topic-toggle" data-target="topo-proc-nepouziva">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Proč se některé topologie dnes už skoro nepoužívají?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-proc-nepouziva" class="topic-panel">
+              <p>
+                Některé topologie (např. sběrnice nebo ring) byly populární v době, kdy byly síťové prvky drahé
+                a chtělo se šetřit kabely. Dnes jsou switche levné a rychlé, a tak převládá hvězda a strom.
+              </p>
+              <p>
+                Moderní sítě také kladou důraz na jednoduchou správu a spolehlivost – a to hvězdicová/stromová topologie splňuje dobře.
+              </p>
+            </div>
+
+            <button class="topic-toggle" data-target="topo-vypadek">
+              <span class="topic-label">
+                <span class="topic-icon">💡</span>
+                <span>Co se stane, když vypadne jeden prvek?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-vypadek" class="topic-panel">
+              <ul>
+                <li><strong>Bus:</strong> problém na hlavním kabelu může zastavit celou síť.</li>
+                <li><strong>Ring:</strong> výpadek jednoho místa může přerušit kruh.</li>
+                <li><strong>Star:</strong> výpadek jednoho PC nevadí, výpadek switche/routeru je zásadní.</li>
+                <li><strong>Tree:</strong> výpadek hlavního propojení může odpojit celou větev.</li>
+                <li><strong>Mesh:</strong> síť často najde náhradní cestu.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- ROZŠIŘUJÍCÍ UČIVO -->
+          <h2 class="topic-section-title">⭐ Rozšiřující učivo</h2>
+
+          <div class="content-card extra">
+
+            <button class="topic-toggle" data-target="topo-fyz-vs-log">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Fyzická vs. logická topologie</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-fyz-vs-log" class="topic-panel">
+              <p>
+                <strong>Fyzická topologie</strong> popisuje skutečné kabely a zapojení.
+                <strong>Logická topologie</strong> popisuje, jak se v síti pohybují data.
+              </p>
+              <p>
+                Například síť může mít fyzicky hvězdu (všechno vede do switche), ale logicky může být provoz řízen
+                tak, že některé části spolu komunikují více než jiné.
+              </p>
+            </div>
+
+            <button class="topic-toggle" data-target="topo-kombinace">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Kombinované topologie v praxi</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-kombinace" class="topic-panel">
+              <p>
+                Reálné sítě často nejsou „čisté“. Ve škole může být strom (hlavní switch → switche ve třídách),
+                ale v učebně jsou počítače zapojené jako hvězda do jednoho switche. Výsledkem je kombinace více topologií.
+              </p>
+            </div>
+
+            <button class="topic-toggle" data-target="topo-internet">
+              <span class="topic-label">
+                <span class="topic-icon">⭐</span>
+                <span>Jaká topologie je internet?</span>
+              </span>
+              <span class="topic-arrow">▾</span>
+            </button>
+            <div id="topo-internet" class="topic-panel">
+              <p>
+                Internet není jedna topologie. Je to obrovská síť mnoha sítí, kde jsou propojeny tisíce routerů.
+                V páteřních částech se často používají principy podobné mesh, protože je důležitá spolehlivost a více cest.
+              </p>
+            </div>
+
+          </div>
+
+          <h2 class="topic-section-title">Shrnutí</h2>
+          <div class="content-card">
+            <ul>
+              <li>Topologie je způsob uspořádání a propojení zařízení v síti.</li>
+              <li>Každá topologie má jiné výhody a nevýhody.</li>
+              <li>Dnes se nejčastěji používá hvězdicová a stromová topologie.</li>
+              <li>Mesh topologie je dražší, ale velmi spolehlivá.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal pro zvětšování obrázků -->
+  <div class="img-modal" id="img-modal">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img id="img-modal-img" src="" alt="Zvětšený obrázek">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      // Zvětšování obrázků
+      document.querySelectorAll('.zoomable').forEach(function (img) {
+        img.addEventListener('click', function () {
+          const fullSrc = img.dataset.full || img.src;
+          modalImg.src = fullSrc;
+          modal.classList.add('open');
+        });
+      });
+
+      function closeModal(e) {
+        if (e.target === modal || e.target === closeBtn) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      }
+
+      modal.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          modal.classList.remove('open');
+          modalImg.src = '';
+        }
+      });
+
+      // Akordeony pro témata
+      document.querySelectorAll('.topic-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetId = btn.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          const isOpen = panel.classList.contains('open');
+
+          // Zavřít ostatní panely v rámci stejného content-card
+          const parentCard = btn.closest('.content-card');
+          parentCard.querySelectorAll('.topic-panel').forEach(function (p) {
+            p.classList.remove('open');
+          });
+          parentCard.querySelectorAll('.topic-toggle').forEach(function (b) {
+            b.classList.remove('active');
+            const arrow = b.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▾';
+          });
+
+          // Přepnout aktuální
+          if (!isOpen) {
+            panel.classList.add('open');
+            btn.classList.add('active');
+            const arrow = btn.querySelector('.topic-arrow');
+            if (arrow) arrow.textContent = '▴';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
